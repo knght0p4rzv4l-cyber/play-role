@@ -1,0 +1,8 @@
+{
+  "name": "RolePlay AI - WhatsApp Style",
+  "description": "Una aplicación de roleplay con diseño de WhatsApp iOS, personajes personalizables, grupos y soporte para IA sin censura.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
