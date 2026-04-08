@@ -54,10 +54,8 @@ export function ChatList({
         <h1 className="text-lg font-bold">Chats</h1>
         <div className="flex gap-4">
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="text-[#007AFF]">
-                <Edit size={22} />
-              </button>
+            <DropdownMenuTrigger className="text-[#007AFF]">
+              <Edit size={22} />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">
               <DropdownMenuItem onClick={onCreateCharacter}>

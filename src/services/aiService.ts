@@ -24,7 +24,7 @@ export class AIService {
     
     // Use DeepSeek if available, otherwise fallback to Gemini
     try {
-      const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
+      const response = await fetch('https://api.deepseek.com/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +46,8 @@ export class AIService {
       });
 
       if (!response.ok) {
-        throw new Error('DeepSeek API error');
+        const errorText = await response.text();
+        throw new Error(`DeepSeek API error: ${response.status} ${errorText}`);
       }
 
       const data = await response.json();

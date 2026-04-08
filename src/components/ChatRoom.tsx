@@ -174,10 +174,8 @@ export function ChatRoom({
       {/* Input Bar */}
       <footer className={`relative z-10 p-2 pb-8 flex items-end gap-2 ${settings.darkMode ? 'bg-[#121212]/90' : 'bg-[#F9F9F9]/90'} backdrop-blur-md`}>
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <button className="text-[#007AFF] p-1.5">
-              <Plus size={24} />
-            </button>
+          <DropdownMenuTrigger className="text-[#007AFF] p-1.5">
+            <Plus size={24} />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" className="w-48">
             <DropdownMenuItem onClick={() => fileInputRef.current?.click()}>
